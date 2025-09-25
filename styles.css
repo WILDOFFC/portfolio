@@ -1,0 +1,226 @@
+:root {
+    --bg-color: #ffffff;
+    --content-color: #242424;
+}
+
+@keyframes slide-in {
+  from {
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+@keyframes slide-in-down {
+  from {
+      transform: translateY(-100%);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+@keyframes slide-in-up {
+  from {
+      transform: translateY(100%);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow: auto;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  background-image: url(/images/background.png);
+  background-size: 50% 50%;
+}
+
+.container {
+  width: 1400px;
+  margin-left: 15%;
+  text-align: center;
+}
+
+.nav {
+  justify-content: space-between;
+  margin-top: 5%;
+  padding: 0;
+  height: 5vh;
+  width: 1400px;
+  border: 2px solid var(--content-color);
+  border-radius: 2% / 50%;
+  background-color: #242424;
+  animation: slide-in-down 1.5s ease-out forwards;
+}
+
+#nav-list li {
+  list-style-type: none;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--bg-color);
+  font-weight: 500;
+}
+
+.about-me h1 {
+  margin-top: 20%;
+  margin-bottom: 40%;
+  animation: slide-in 1s ease-out forwards;
+}
+
+.about-me h1:hover {
+  transition: 1s;
+  background-color: var(--content-color);
+  color: var(--bg-color);
+}
+
+.about-me-text {
+  background-color: var(--content-color);
+  font-weight: 300;
+  font-size: 18pt;
+  color: var(--bg-color);
+  border: 1px solid var(--content-color);
+  border-radius: 10% / 80%;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 72pt;
+  font-weight: lighter;
+}
+
+.skills {
+  border: 3px solid var(--content-color);
+  border-radius: 40px;
+  background-color: var(--bg-color);
+  display: flex;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  animation: slide-in 2s ease-out forwards;
+  animation-timeline: scroll(self-block);
+}
+
+.my-skills h1:hover {
+  transition: 1s;
+  background-color: var(--content-color);
+  color: var(--bg-color);
+  border: 1px solid var(--content-color);
+  border-radius: 10% / 100%;
+}
+
+.skills-langs {
+  flex-direction: row;
+  align-items: center;
+}
+
+.skills-langs img {
+  border: 1px solid var(--bg-color);
+  border-radius: 50px;
+}
+
+.skills-langs li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+.skills-langs p {
+  width: 80%;
+  padding-left: 10%;
+}
+
+.skills-langs-info {
+  border: 1px solid var(--content-color);
+  border-radius: 50px;
+  border-top: 0;
+  margin-top: 0;
+}
+
+.language {
+  background-color: var(--bg-color);
+  width: 230px;
+  height: 250px;
+  border: 1px solid var(--content-color);
+  border-radius: 40px;
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.language img {
+  padding-top: 10px;
+}
+
+.portfolio {
+  background-color: var(--content-color);
+  display: flex;
+  padding-left: 10px;
+  padding-top: 10px;
+  flex-direction: row;
+  border: 1px solid var(--content-color);
+  border-radius: 50px;
+  animation: slide-in 2s ease-out forwards;
+  animation-timeline: scroll(self-block);
+}
+
+.portfolio h2 {
+  color: var(--bg-color);
+}
+
+.portfolio img {
+  border: 1px solid var(--content-color);
+  border-radius: 30px;
+}
+
+.portfolio li {
+  display: inline-block;
+}
+
+.portfolio-projects img {
+  opacity: 1;
+}
+
+.portfolio-projects h2 {
+  
+}
+
+.portfolio-projects img:hover {
+  opacity: 0.1;
+  transition: 1s;
+}
+
+.footer {
+  display: inline-block;
+  width: 1400px;
+  height: 80px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  padding: 10px;
+  animation: slide-in-up 2s ease-out forwards;
+  animation-timeline: scroll(self-block);
+}
+
+.footer li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+.contacts {
+  background: none;
+  border: 5px solid var(--content-color);
+  border-radius: 50px / 50px;
+}
