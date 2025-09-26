@@ -110,6 +110,8 @@ body {
   border: 1px solid var(--content-color);
   border-radius: 10% / 80%;
   margin-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 h1 {
@@ -172,6 +174,20 @@ h1 {
   margin-top: 0;
 }
 
+.skills-langs-info-design li {
+  display: inline-block;
+  list-style-type: none;
+  width: 175px;
+  padding-top: 0;
+  border: 1px solid var(--bg-color);
+  border-radius: 10%;
+}
+
+.skills-langs-info-design h2 {
+  color: var(--bg-color);
+  font-size: 16pt;
+}
+
 .language {
   background-color: var(--bg-color);
   width: 230px;
@@ -213,10 +229,39 @@ h1 {
 
 .portfolio-projects img {
   opacity: 1;
+  display: block;
 }
 
-.portfolio-projects img:hover {
-  opacity: 0.1;
+
+.project {
+  position: relative;
+  padding: 10px;
+  display: inline-block;
+}
+
+.project img {
+  height: 400px;
+  display: block;
+  transition: 0.3s;
+}
+
+.project h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 0.3s;
+  color: var(--bg-color);
+  margin: 0;
+}
+
+.project:hover img {
+  filter: brightness(0.3);
+}
+
+.project:hover h2 {
+  opacity: 1;
   transition: 1s;
 }
 
